@@ -1,0 +1,1456 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 8,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "red",
+                  "index": 1,
+                  "text": "DESCONECTADA"
+                },
+                "1": {
+                  "color": "green",
+                  "index": 0,
+                  "text": "CONECTADA"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 9,
+        "x": 0,
+        "y": 0
+      },
+      "id": 20,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "PSU"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "PSU 1 state"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "PSU"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "PSU 2 state"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "FONTE STATUS",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 1024000000,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 900000000
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 9,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "displayMode": "lcd",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "Informações"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "Memória Usada"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "Memória Usada (RAM)",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 60
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 13,
+        "y": 0
+      },
+      "id": 14,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "CPU"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "CPU Geral"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "CPU Geral",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "text",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dtdhms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 7,
+        "x": 17,
+        "y": 0
+      },
+      "id": 16,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "Informações"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "Uptime"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "UPTIME",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 4,
+      "panels": [],
+      "repeat": "Interfaces",
+      "repeatDirection": "h",
+      "title": "Informações da $Interfaces",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 80,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Bps"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 18,
+        "x": 0,
+        "y": 5
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": "Interface Trafego"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "In interface sfp-sfpplus$Interfaces"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Interface Trafego"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "Out interface sfp-sfpplus$Interfaces"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "Interface $Interfaces",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "UP"
+                },
+                "2": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "DOWN"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 18,
+        "y": 5
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "repeat": "Status",
+      "repeatDirection": "v",
+      "targets": [
+        {
+          "application": {
+            "filter": "Interface Status"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "Status Interface $Status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "Status Da Interface $Status",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 3,
+                  "text": "SEM CONEXÃO"
+                },
+                "10000000": {
+                  "color": "dark-yellow",
+                  "index": 2,
+                  "text": "10MB"
+                },
+                "100000000": {
+                  "color": "dark-orange",
+                  "index": 1,
+                  "text": "100MB"
+                },
+                "1000000000": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "1GB"
+                },
+                "4290000000": {
+                  "color": "dark-green",
+                  "index": 4,
+                  "text": "10GB"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "decbytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 18,
+        "y": 8
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "Interfaces"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "Rate$Velocidade"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "Status Da Interface $Velocidade",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 14
+              },
+              {
+                "color": "dark-orange",
+                "value": 20
+              },
+              {
+                "color": "dark-red",
+                "value": 24
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.4.3",
+      "targets": [
+        {
+          "application": {
+            "filter": "Interfaces SFP"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "RX Power : sfp-sfpplus$Sinal"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        },
+        {
+          "application": {
+            "filter": "Interfaces SFP"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "DATA CENTER"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$Dispositivo"
+          },
+          "item": {
+            "filter": "TX Power : sfp-sfpplus$Sinal"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "title": "Sinal $Sinal",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "postgres",
+        "uid": "cEzDSqw7z"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "id": 10,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:25px;font-weight:700; background-color:#FF0000;border-radius:10px; text-align:center\"><p>PROBLEMAS</p></div>",
+        "mode": "html"
+      },
+      "pluginVersion": "9.4.3",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "ackEventColor": "rgb(56, 219, 156)",
+      "ackField": false,
+      "ageField": false,
+      "customLastChangeFormat": false,
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "7qUfMSa4z"
+      },
+      "descriptionAtNewLine": false,
+      "descriptionField": true,
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "highlightBackground": false,
+      "highlightNewEvents": false,
+      "highlightNewerThan": "1h",
+      "hostField": true,
+      "hostGroups": false,
+      "hostProxy": false,
+      "hostTechNameField": false,
+      "id": 12,
+      "lastChangeFormat": "",
+      "layout": "table",
+      "markAckEvents": false,
+      "okEventColor": "rgb(56, 189, 113)",
+      "pageSize": 10,
+      "pluginVersion": "8.5.1",
+      "problemTimeline": true,
+      "resizedColumns": [],
+      "schemaVersion": 8,
+      "severityField": true,
+      "showTags": false,
+      "sortProblems": "lastchange",
+      "statusField": true,
+      "statusIcon": false,
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "7qUfMSa4z"
+          },
+          "functions": [],
+          "group": {
+            "filter": "CRS"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "showProblems": "recent",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2,
+            "count": true,
+            "minSeverity": 3
+          }
+        }
+      ],
+      "transparent": true,
+      "triggerSeverity": [
+        {
+          "$$hashKey": "object:826",
+          "color": "rgb(108, 108, 108)",
+          "priority": 0,
+          "severity": "Not classified",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:827",
+          "color": "rgb(120, 158, 183)",
+          "priority": 1,
+          "severity": "Information",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:828",
+          "color": "rgb(175, 180, 36)",
+          "priority": 2,
+          "severity": "Warning",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:829",
+          "color": "rgb(255, 137, 30)",
+          "priority": 3,
+          "severity": "Average",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:830",
+          "color": "rgb(255, 101, 72)",
+          "priority": 4,
+          "severity": "High",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:831",
+          "color": "rgb(215, 0, 0)",
+          "priority": 5,
+          "severity": "Disaster",
+          "show": true
+        }
+      ],
+      "type": "alexanderzobnin-zabbix-triggers-panel"
+    }
+  ],
+  "refresh": "10s",
+  "revision": 1,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "CRS MALHA",
+          "value": "CRS MALHA"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "7qUfMSa4z"
+        },
+        "definition": "Zabbix - host",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Dispositivo",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "CRS",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "1-ptp-001-borda BGP",
+          "value": "1-ptp-001-borda BGP"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "7qUfMSa4z"
+        },
+        "definition": "Zabbix - item",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Interfaces",
+        "options": [],
+        "query": {
+          "application": "Interface Trafego",
+          "group": "DATA CENTER",
+          "host": "$Dispositivo",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(?:In |Out)(?:interface sfp-sfpplus)(.*)/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "sfp-sfpplus1-ptp-001-borda",
+          "value": "sfp-sfpplus1-ptp-001-borda"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "7qUfMSa4z"
+        },
+        "definition": "Zabbix - item",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Status",
+        "options": [],
+        "query": {
+          "application": "Interface Status",
+          "group": "DATA CENTER",
+          "host": "$Dispositivo",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(?:Status Interface )(.*)/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": " sfp-sfpplus1-ptp-001-borda",
+          "value": " sfp-sfpplus1-ptp-001-borda"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "7qUfMSa4z"
+        },
+        "definition": "Zabbix - item",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Velocidade",
+        "options": [],
+        "query": {
+          "application": "Interfaces",
+          "group": "DATA CENTER",
+          "host": "$Dispositivo",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(?:Rate)(.*)/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "1-ptp-001-borda - BGP",
+          "value": "1-ptp-001-borda - BGP"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "7qUfMSa4z"
+        },
+        "definition": "Zabbix - item",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Sinal",
+        "options": [],
+        "query": {
+          "application": "Interfaces SFP",
+          "group": "DATA CENTER",
+          "host": "$Dispositivo",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(?:RX |TX)(?:Power : sfp-sfpplus)(.*)/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "CRS",
+  "uid": "NsEE1ix4z",
+  "version": 9,
+  "weekStart": ""
+}
